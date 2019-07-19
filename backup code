@@ -1,0 +1,26 @@
+                <?php 
+            if($resultCheck>0){
+
+            
+            while($rows=mysqli_fetch_assoc($result))
+            {
+                ?>
+            <tbody>
+            <tr>
+                <td><input type="checkbox" name="ID[]" id="DBID" value="<?php echo $rows['ID']; ?>"><?php echo $rows['ID']; ?></td>
+                <td><?php echo $rows['SerialNumber']; ?></td>
+                <td><?php echo $rows['Model']; ?></td>
+                <td><?php echo $rows['FlowtagNumber']; ?></td>
+                <td><?php echo $rows['Units']; ?></td>
+                <td><?php echo $rows['DateIn']; ?></td>
+                <td><?php echo $rows['DateOut']; ?></td>
+                <td><?php echo $rows['Problem']; ?></td>
+                <td><?php echo $rows['Remark']; ?></td>
+                <td><?php echo $rows['WarrantyPeriod']; ?></td>
+                <td><?php echo $rows['CustomerName']; ?></td>
+            </tr>
+                </tbody>
+            <?php
+            }
+        }
+            ?>
